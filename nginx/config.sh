@@ -1,10 +1,11 @@
 mkdir -p /etc/nginx/{conf,conf.d,sites-enabled}
-repo_url=https://raw.githubusercontent.com/jiz4oh/shell
+repo_url=https://raw.githubusercontent.com/jiz4oh/shell/nginx/resources
 
-nginx_conf=$repo_url/nginx/nginx.conf
-mime_types=$repo_url/nginx/mime.types
+nginx_conf=$repo_url/nginx.conf
+mime_types=$repo_url/mime.types
 
-echo $nginx_conf
+echo "use $nginx_conf as nginx.conf"
 curl $nginx_conf > /etc/nginx/nginx.conf
-echo $mime_types
+
+echo "use $mime_types as mime.types"
 curl $mime_types > /etc/nginx/mime.types
