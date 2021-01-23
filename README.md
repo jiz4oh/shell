@@ -33,3 +33,11 @@
 ### rvm.sh
 
 - 脚本说明: 安装 rvm 并通过参数安装对应的 ruby 版本
+
+## vps 相关脚本
+
+[查看vps所有脚本信息](https://github.com/jiz4oh/shell/tree/master/vps)
+
+### init.sh
+
+- 脚本说明: 快速配置一些vps常用设置
