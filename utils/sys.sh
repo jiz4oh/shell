@@ -37,16 +37,16 @@ check_sys() {
   fi
 }
 
+RELEASE_VERSION=$(check_sys)
+
 # package manager install
 pm_install() {
-  case $(check_sys) in
+  case $RELEASE_VERSION in
   debian | ubuntu | devuan)
-    apt-get update
     echo "Installing $@"
     apt-get install -y "$@" -qq --no-install-recommends
     ;;
   centos | rhel)
-    yum update
     echo "Installing $@"
     yum install -y "$@" -q
     ;;
