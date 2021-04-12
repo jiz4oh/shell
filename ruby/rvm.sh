@@ -8,7 +8,7 @@ curl -sSL https://get.rvm.io | bash -s stable
 mkdir -p ~/.rvm/user
 echo "ruby_url=https://cache.ruby-china.com/pub/ruby" > ~/.rvm/user/db
 
-source /home/vagrant/.rvm/scripts/rvm
+source $HOME/.rvm/scripts/rvm
 
 rvm use --default --install --disable-binary $1
 
